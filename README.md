@@ -1,7 +1,10 @@
-# AI-Driven Health Risk Prediction
+# AI-Driven Health Risk Prediction For Interconnected Chronic Diseases
 
-This is a Machine Learning application built using **Streamlit**. It predicts the risk levels for:
+This is a Machine Learning application built using **Streamlit**.
+## 👨‍💼 Team Leadership
 
+This is Major project of my B.Tech,I served as the **Team Leader** successfully completed and submitted to College as part of Academics.
+ It predicts the risk levels for:
 - Diabetes
 - Heart Disease
 - Kidney Disease (via CT scan images)
@@ -10,9 +13,7 @@ Users can input personal health details or upload kidney scan images, then it pr
 
 ---
 
-## 👨‍💼 Team Leadership
 
-This is Major project of my B.Tech,I served as the **Team Leader** successfully completed and submitted to College as part of Academics.
 
 ---
 
