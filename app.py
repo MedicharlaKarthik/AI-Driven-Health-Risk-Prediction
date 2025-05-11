@@ -20,9 +20,9 @@ def load_model(model_path):
         return None
 
 # Load models for Diabetes
-log_reg_model = load_model(r"models/diabetes_log_reg_model (3).pkl")
-rf_model = load_model(r"models/diabetes_rf_model (3).pkl")
-diabetes_scaler = load_model(r"models/diabetes_scaler (3).pkl")
+log_reg_model = load_model(r"models/diabetes_log_reg_model.pkl")
+rf_model = load_model(r"models/diabetes_rf_model.pkl")
+diabetes_scaler = load_model(r"models/diabetes_scaler.pkl")
 
 # Load models for Heart Disease
 knn_model = load_model(r"models/heart_knn_model.pkl")
@@ -277,9 +277,17 @@ if (st.session_state.get("diabetes_result") is not None and
         k = st.session_state.kidney_result       # 0: Cyst, 1: Normal, 2: Stone, 3: Tumor
         if k == 3 or (d == 1 and h == 1 and k in [0, 2, 3]):
             overall_risk = "High Risk"
+            st.success(f"Overall Health Risk Prediction: {overall_risk}")
         elif d == 0 and h == 0 and k == 1:
             overall_risk = "No Risk"
+            st.success(f"Overall Health Risk Prediction: {overall_risk}")
         else:
-            overall_risk = "Medium Risk"
+            final_model = load_model("models/final_svm_model.pkl") 
+            if final_model is not None: 
+               final_input_df = pd.DataFrame([[d, h, k]], columns=["diabetes_result", "heart_result", "kidney_result"]) 
+               overall_risk_pred = final_model.predict(final_input_df)[0] 
+               st.success(f"Overall Health Risk Prediction: {overall_risk_pred}") 
+            else: 
+               st.error("Final model not found or failed to load.")
         
-        st.success(f"Overall Health Risk Prediction: {overall_risk}")
+        
