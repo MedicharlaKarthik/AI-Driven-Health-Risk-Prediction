@@ -1,0 +1,1 @@
+Here are Screen Shots which incldes input forms for diabetes, heart those take text values and kidney input form takes input image and individual model predicts outcome of disease and then overall health risk is predicted
