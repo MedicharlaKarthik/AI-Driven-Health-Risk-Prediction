@@ -60,3 +60,27 @@ Users can input personal health details or upload kidney scan images, then it pr
   - `pandas`, `numpy` for data processing  
   - `Keras`, `OpenCV` for kidney image classification  
   - `Jupyter Notebooks` for training and experimentation
+ 
+### Below are some screenshots of the user interface and prediction output:
+
+#### Diabetes Input Form
+![Diabetes Input Form](screenshots/diabetes_input_form.jpg)
+
+#### Diabetes Prediction Output
+![Diabetes Prediction](screenshots/diabetes_pred.jpg)
+
+#### Heart Input Form
+![Heart Input Form](screenshots/heart_input_form.jpg)
+
+#### Heart Prediction Output
+![Heart Prediction](screenshots/heart_prediction.jpg)
+
+#### Kidney Input Form
+![Kidney Input Form](screenshots/kidney_input_form.jpg)
+
+#### Kidney Input Image
+![Kidney Input Image](screenshots/kidney_input_img.jpg)
+
+#### Overall Health Risk Prediction
+![Overall Health Risk](screenshots/overall_health_risk.jpg)
+
